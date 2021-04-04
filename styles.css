@@ -23,12 +23,17 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 0 2rem;
   }
 
   nav {
     display: inline-block;
     float: right;
-    margin-right: 50px;
+    margin-right: 3rem;
+  }
+
+main {
+    padding: 0 2rem;
   }
 
 /* Navigation */
@@ -61,7 +66,7 @@
 /* Typography */
 
   h1,h2,h3,h4 {
-    color: hsl(100, 0%, 50%);
+    color: hsl(100, 0%, 30%);
     font-family: "Lora", serif;
     font-weight: 700;
     font-style: italic;
@@ -85,16 +90,17 @@
   }
 
   p {
-    color: hsl(100, 0%, 50%);
+    color: hsl(100, 0%, 30%);
     font-family: "Open Sans", sans-serif;
     letter-spacing: 0.01rem;
     line-height: 1.25rem;
     font-style: normal;
-    font-weight: 100;   
+    font-weight: 100;
+    margin-bottom: 0.5rem;
   }
 
   p b {
-    display: inline;
+    display: inline-block;
     font-family: "Open Sans", sans-serif;
     letter-spacing: 0.01rem;
     line-height: 1.25rem;
@@ -107,20 +113,19 @@
   .grid-container {
     display: grid;
     width: 100%;
-    grid-template: repeat(12, minmax(50px, auto)) / repeat(6, 1fr);
+    grid-template: repeat(20, 50px) / repeat(6, 1fr);
     grid-gap: 0.5rem 0.5rem;
-    margin: 3rem;
   }
-
 
 /* Colour Scheme */
 
   .grid-heading {
     grid-column-start: 1;
     grid-column-end: 7;
+    text-align: center;
   }
 
-  .colour-item-1 {
+  .colour-item-1 { 
     background-color: hsl(190, 50%, 45%);
     grid-area: 2 / 1 / 4 / 4;
   }
@@ -131,15 +136,92 @@
   }
 
   .colour-item-3 {
-    padding: 0 1rem;
-    grid-area: 2 / 4 / 5 / 7;
+    grid-area: 2 / 4 / 5 / 6;
   }
 
   .colour-item-4 {
-    padding: 0 1rem;
     grid-area: 5 / 4 / 8 / 7;
   }
 
+
+
+/* Typography */
+
+  .typography-item-1 {
+    grid-area: 9 / 1 / 14 / 2;
+  }
+
+  .typography-item-2 {
+    grid-area: 9 / 2 / 14 / 3;
+  }
+
+  .typography-item-3 {
+    grid-area: 9 / 3 / 14 / 4;
+  }
+
+  .typography-item-4 {
+    grid-area: 9 / 4 / 14 / 7;
+  }
+
+
+
+/*  Components */
+
+  .component-1 {
+    grid-area: 15 / 3 / 15 / 5;
+    text-align: center;
+  }
+
+.button-primary {
+  border: 0.2rem solid hsl(190, 50%, 45%);
+  background-color: hsl(190, 50%, 45%);
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+  color: white;
+  padding: 1rem;
+}
+
+.button-primary:hover {
+  text-decoration: underline;
+}
+
+.button-primary:active {
+  border: 0.2rem solid hsl(10, 100%, 90%);
+  background-color: hsl(10, 100%, 90%);
+  color: hsl(190, 50%, 45%);
+}
+
+.button-secondary {
+  border: 0.2rem solid hsl(190, 50%, 45%);
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+  color: hsl(190, 50%, 45%);
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.button-secondary:hover {
+  border: 0.2rem solid hsl(190, 50%, 45%);
+  text-decoration: underline;
+}
+
+.button-secondary:active {
+  border-color: hsl(10, 100%, 90%);
+}
+
+.button-primary, .button-secondary {
+  margin: 0.5rem;
+}
 
 /* Responsive */
 
